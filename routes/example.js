@@ -1,7 +1,12 @@
 // routes/example
 
 var express 	= require('express'),
-	router 		= express.Router();
+	router 		= express.Router(),
+	multer 		= require('multer');
+
+// ===== multer setting =====
+var upload = multer( );
+
 
 
 /**
@@ -9,14 +14,15 @@ var express 	= require('express'),
 *	----------------------------------------------------------------
 *	POST 	 유저 생성
 *	GET	 모든 유저를 조회
-*
+* 	PUT 	 유저 수정
+* 	DELETE 유저 삭제
 **/
 router.route('/users')
 
-	.post(function (req, res) {
+	// upload.any() 를 통해서 form-data body를 받을 수 있다.
+	.post(upload.any(), function (req, res) {
 		res.json({
 			message: '/users POST method',
-			header : req.header,
 			body : req.body
 		});
 	})
@@ -24,7 +30,6 @@ router.route('/users')
 	.get(function (req, res) {
 		res.json({
 			message: '/users GET method',
-			header : req.header,
 			body : req.body
 		});
 	})
@@ -32,7 +37,6 @@ router.route('/users')
 	.put(function (req, res) {
 		res.json({
 			message: '/users PUT method',
-			header : req.header,
 			body : req.body
 		});
 	})
@@ -40,7 +44,6 @@ router.route('/users')
 	.delete(function (req, res) {
 		res.json({
 			message: '/users DELETE method',
-			header : req.header,
 			body : req.body
 		});
 	})
