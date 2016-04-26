@@ -1,0 +1,17 @@
+{
+  "name": "basic-example-node",
+  "version": "1.0.0",
+  "description": "basic example express nodejs",
+  "main": "server.js",
+  "dependencies": {
+    "body-parser": "^1.15.0",
+    "express": "^4.13.4",
+    "multer": "^1.1.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "node server.js"
+  },
+  "author": "Euntak (https://euntak.github.io/blog)",
+  "homepage": "https://euntak.github.io/blog"
+}
