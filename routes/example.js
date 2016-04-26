@@ -21,9 +21,11 @@ router.route('/users')
 
 	// upload.any() 를 통해서 form-data body를 받을 수 있다.
 	.post(upload.any(), function (req, res) {
+
 		res.json({
 			message: '/users POST method',
-			body : req.body
+			body : req.body,
+			files : req.files
 		});
 	})
 
