@@ -6,7 +6,9 @@
 ### TEST
 
 [POSTMAN](http://www.getpostman.com/)
+
 GET , PUT , DELETE [ x-www-form-urlencoded ]
+
 POST [ x-www-form-urlencoded , form-data ]
 
 ### GET 
